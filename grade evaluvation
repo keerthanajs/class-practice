@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int main()
+{
+    int eng, math, csc, chem, icfm, sum;
+    float grade;
+    
+    printf("Enter Marks obtained in 5 Subjects: ");
+    scanf("%d %d %d %d %d", &eng, &math, &csc, &chem, &icfm);
+    
+    sum = eng + math + csc + chem + icfm;
+    
+    grade = (sum / 500) * 100;
+    
+    if(grade > 9.0 && grade <= 10){
+        printf("O grade ");
+    }else if(grade)
+    return 0;
+}
+>9.0 and <=10 - O Grade
+>8.0 and <=9.0 - A+ Grade
+>7.0 and <= 8.0 - A Grade
+>6.0 and <= 7.0 - B+ Grade
+
+>=5.0 and <=6.0 - B Grade
+<5.0 - RA
