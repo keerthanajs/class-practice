@@ -3,18 +3,26 @@
 #include<stdio.h>
 #include<math.h>
 
-int main(){
-    int a, b, c, roots;
+int main(){ 
     
+    int a, b, c, d, roots;
+
     printf("Enter the co-efficient of x^2 of the quadratic equation: ");
     scanf("%d", &a);
     printf("Enter the co-efficient of x of the quadratic equation: ");
     scanf("%d", &b);
     printf("Enter the constant value of the quadratic equation: ");
     scanf("%d", &c);
+
+    if((b * b) < (4 * a * c)){
+        printf("Roots are complex (not real)");
+    } else if((b * b) == (4 * a * c)){
+        printf("Roots are real and same");
+    } else if((b * b) > (4 * a * c)){
+        printf("Roots are real and different");
+    }
     
-    roots =  (b * b - )
-
-
+    
+    
     return 0;
 }
