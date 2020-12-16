@@ -1,0 +1,20 @@
+// print 2 tables
+#include <stdio.h>
+
+int main()
+{
+    int num, i, n;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Enter the nuber upto which to be printed: ");
+    scanf("%d", &n);
+    
+    
+    printf("TABLES\n");
+    
+    for(i = 1; i <= n; i++){
+        printf("%d * %d = %d\n", num, i, num*i);
+    }
+
+    return 0;
+}
