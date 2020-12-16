@@ -1,0 +1,26 @@
+// amstrong number or not
+#include <stdio.h>
+
+int main()
+{
+    int num, digit, amstrong_num = 0, original_num;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    original_num = num;
+    
+    while(num > 0){
+        digit = num % 10;
+        amstrong_num = amstrong_num + (digit * digit * digit);
+        num = num / 10;
+    }
+    if(amstrong_num == original_num){
+        printf("It's an amstrong number.");
+    } else {
+         printf("It's not an amstrong number.");
+    }
+    
+
+    return 0;
+}
