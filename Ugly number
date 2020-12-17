@@ -1,0 +1,37 @@
+#include<stdio.h> 
+
+  
+int main() 
+{ 
+    
+    int originalNumber;
+    int number;
+    
+    printf("Enter a number in range 1 to 100: "); 
+    scanf("%d",&originalNumber);
+    number = originalNumber;
+    
+    while(number%2 == 0) 
+    {
+        number = number/2;    
+    }
+    
+    while(number%3 == 0) 
+    {
+        number = number/3;    
+    }
+    
+    while(number%5 == 0) 
+    {
+        number = number/5;    
+    }
+    
+    if(number==1){
+        printf("%d is ugly number\n",originalNumber);
+    }else {
+        printf("%d is not an ugly number\n",originalNumber);
+    }
+    
+    return 0; 
+} 
+
