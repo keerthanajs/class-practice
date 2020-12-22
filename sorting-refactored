@@ -1,0 +1,60 @@
+//ascending and descending order in an array
+
+#include <stdio.h>
+int ascendingOrder(int a, int b){
+    return a < b;
+}
+int descendingOrder(int a, int b){
+    return a > b;
+}
+
+void sort(int a[], int size, int (*orderFn)(int, int)){
+    int temp;
+    for(int i = 0; i < size; i++){
+        for(int j = 0; j < size; j++){
+            if((*orderFn)(a[i],a[j])){
+                temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+}
+
+int main()
+{
+    int a[50], n, temp;
+    int order;
+
+    printf("Enter the number of elements in an array: ");
+    scanf("%d", &n);
+    
+    for(int i = 0; i < n; i++){
+        printf("Enter array element %d: ", i+1);
+        scanf("%d", &a[i]);
+    }
+
+    
+    printf("Enter 1 for ascending 2 for decending: ");
+    scanf("%d",&order);
+    
+    int (*orderFn)(int, int) = ascendingOrder;
+    if(order == 1){
+        orderFn = &ascendingOrder;
+        printf("Ascending Order\n");
+    }else {
+        orderFn = &descendingOrder;
+        printf("Descending Order\n");
+    }
+
+    sort(a,n,orderFn);
+    
+    
+    for(int i = 0; i < n; i++){
+        printf("Array element %d: %d \n", i+1, a[i]);
+    }
+
+    return 0;
+}
+
+
