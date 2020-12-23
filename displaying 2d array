@@ -1,0 +1,26 @@
+//Display of an Array Elements
+#include<stdio.h>
+int main()
+{
+    int a[10][10],i,j;
+    
+    printf("Enter the Matrix Values: \n");                      //  Input Matrix
+   
+    for(i=0;i<3;i++){                                           //  Row
+        for(j=0;j<3;j++){                                      //  Column
+            printf("Matrix is [%d][%d]:",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    
+    printf("Entered Matrix is: \n");                            //  Output Matrix
+    
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf("%4d",a[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
