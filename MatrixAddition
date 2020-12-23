@@ -1,0 +1,55 @@
+//Matrix Addition
+#include<stdio.h>
+int main()
+{
+    int m1[10][10],m2[10][10],add[10][10],i,j,row,col;
+    
+    printf("How Many Rows Required?");
+    scanf("%d",&row);
+   
+    printf("How Many Columns Required?");
+    scanf("%d",&col);
+   
+    printf("Enter First Matrix:\n");
+   
+    for(i=0;i<row;i++){
+        for(j=0;j<col;j++){
+            scanf("%d",&m1[i][j]);
+        }
+    }
+    
+    printf("Entered First Matrix: \n");
+    
+    for(i=0;i<row;i++){
+        for(j=0;j<col;j++){
+            printf("%d\t",m1[i][j]);
+        }
+        printf("\n");
+    }
+    
+    printf("Enter Second Matrix:\n");
+    for(i=0;i<row;i++){
+        for(j=0;j<col;j++){
+            scanf("%d",&m2[i][j]);
+        }
+    }
+    
+    printf("Entered Second Matrix: \n");
+    
+    for(i=0;i<row;i++){
+        for(j=0;j<col;j++){
+            printf("%d\t",m2[i][j]);
+        } printf("\n");
+    }
+    
+    printf("Addition Matrix\n");
+    
+    for(i=0;i<row;i++){
+        for(j=0;j<col;j++){
+            add[i][j] = m1[i][j] + m2[i][j];
+            printf("%d\t",add[i][j]);
+        } printf("\n");
+    }
+     
+    return 0;
+}
