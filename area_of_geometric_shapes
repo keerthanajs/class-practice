@@ -1,0 +1,88 @@
+// NAWR Write a C Program to find area of Geometric Shapes(Triangle, Square, Rectangle and Parallelogram) using Functions
+
+#include <stdio.h>
+
+int triangle_area();
+int square_area();
+int rectangle_area();
+int parallelogram_area();
+
+int main()
+{
+    int area, side, length, breadth, height, n;
+    
+    printf("Enter 1.to find area of triangle  2.to find area of square 3.to find area of rectangle 4.to find area of parallelogram.\n");
+    scanf("%d", &n);
+    
+    switch (n)
+    {
+        case 1: { 
+                    area = triangle_area();
+                    printf("Area is %d\n", area);
+                    break;
+                }
+        case 2: { 
+                    area = square_area();
+                    printf("Area is %d\n", area);
+                    break;
+                }
+        case 3: { 
+                    area = rectangle_area();
+                    printf("Area is %d\n", area);
+                    break;
+                }
+        case 4: { 
+                    area = parallelogram_area();
+                    printf("Area is %d\n", area);
+                    break;
+                }
+        default: printf("Invalid number entered.\n");
+        
+    }
+    return 0;
+}
+
+int triangle_area()
+{
+    int height, breadth, area;
+    
+    printf("Enter height and breadth : ");
+    scanf("%d%d", &height, &breadth);
+    
+    area = (height * breadth) / 2;
+    
+    return area;
+}
+
+int square_area()
+{
+    int side, area;
+    
+    printf("Enter side : ");
+    scanf("%d", &side);
+    
+    area = side * side;
+    return area;
+}
+
+int rectangle_area()
+{
+    int length, breadth, area;
+    
+    printf("Enter length and breadth : ");
+    scanf("%d%d", &length, &breadth);
+    
+    area = length * breadth;
+    return area;
+}
+
+int parallelogram_area()
+{
+    int height, breadth, area;
+    
+    printf("Enter height and breadth : ");
+    scanf("%d%d", &height, &breadth);
+    
+    area = height * breadth;
+    return area;
+}
