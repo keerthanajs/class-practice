@@ -1,0 +1,31 @@
+//factorial using recursion
+#include <stdio.h>
+
+int factorial(int num);   
+
+int main()
+{
+    int num, result;
+    
+    printf("Enter any Number: ");
+    scanf("%d",&num);
+    
+    if(num < 0){
+        printf("Invalid input.\nEnter a positive number.\n");
+        
+    } else{
+        result = factorial(num);                   
+        printf("Factorial of %d : %d", num, result);
+    }
+    
+    return 0;
+}
+
+int factorial(int num)                         
+{
+    if(num >= 1){
+        return num * factorial(num - 1);    
+    } else{
+        return 1;
+    }
+}
