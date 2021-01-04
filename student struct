@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+struct Student{
+    int reg_no;
+    char Name[25];
+    int Age;
+    char dept[10];
+};
+
+struct Student s[2];
+
+int main()
+{
+    int i;
+    
+    for(i = 0; i < 3; i++){
+        
+        printf("Enter details of %d Student\n", i+1);
+
+        printf("Enter Student reg_no : ");
+        scanf("%d", &s[i].reg_no); 
+        
+        printf("Enter Student Name : ");
+        scanf("%s", s[i].Name);
+         
+        printf("Enter Student Age : ");
+        scanf("%d", &s[i].Age);
+        
+        printf("Enter department: ");
+        scanf("%s", s[i].dept);
+        
+    }
+    
+    printf("\nDetails of Students");
+    
+    for(i=0; i < 3; i++){
+        printf("\n%d\t%s\t%d\t%s\n", s[i].reg_no, s[i].Name, s[i].Age, s[i].dept);
+    }
+    
+    return 0;
+}
