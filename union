@@ -1,0 +1,31 @@
+//Employee Database using Union
+#include <stdio.h>
+
+union employee
+{
+    char name[50];
+    int eid;
+    float salary;
+};
+
+int main()
+{
+    union employee e[10];
+    int i,n;
+    printf("Enter number of employees ");
+    scanf("%d",&n);
+    for(i=0;i<n;++i){
+        printf("Enter information of employee %d:\n",i+1);
+        printf("Enter eid: ");
+        scanf("%d",&e[i].eid);
+        printf("Information for eid number %d: \n",e[i].eid);
+        printf("Enter name: ");
+        scanf("%s",e[i].name); 
+        printf("Name: %s\n", e[i].name);
+        printf("Enter salary: ");
+        scanf("%f",&e[i].salary);
+        printf("salary: %f\n",e[i].salary);
+        printf("=======================\n");
+    }
+   return 0;
+}
