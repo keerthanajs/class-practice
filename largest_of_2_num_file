@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int num1,num2,big;
+   
+   FILE *fptr;
+   fptr = fopen("big.txt","w");
+   
+   if(fptr == NULL)
+    {
+        printf("Error!");   
+        exit(1);             
+    }
+   
+   printf("Enter num1: ");
+   scanf("%d",&num1);
+   
+   printf("Enter num2: ");
+   scanf("%d",&num2);
+   
+   big = (num1 > num2)?num1:num2;
+   
+   fprintf(fptr,"Biggest of %d and %d is %d",num1,num2,big);
+   
+   fclose(fptr);
+   
+   return 0;
+}
