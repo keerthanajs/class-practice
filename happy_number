@@ -1,0 +1,38 @@
+/*C Program to check a number is a Happy or not[To find whether a given number is happy or not, calculate the square of each digit present in number
+and add it to a variable sum. If resulting sum is equal to 1 then, given number is a happy number ]*/
+
+#include <stdio.h>
+
+int sumOfDigits(int n){
+    int sum = 0;
+    int digit =0;
+    while(n != 0){
+        digit = n % 10;
+        sum = sum + (digit * digit);
+        n = n / 10;
+    }
+    printf("%d ",sum );
+    return sum;
+}
+
+int main()
+{
+    int n, digit = 0, sum = 0;
+    
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    
+    int orginal_num = n;
+    
+    while(n>=9){
+        n = sumOfDigits(n);    
+    }
+
+    if(n==1){
+        printf("Happy Number\n");
+    }else {
+        printf("Not a Happy Number\n");
+    }
+    
+    return 0;
+}
