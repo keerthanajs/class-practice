@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    
+    FILE *fptr;
+    char text[50];
+    
+    fptr = fopen("colleges.txt","w+");
+    
+    scanf("%[^\n]%*c",text);
+    
+    fprintf(fptr,"%s",text);
+    
+    fscanf(fptr,"%[^\n]%*c",text);
+    
+    printf("%s",text);
+    
+    fclose(fptr);
+    return 0;
+}
