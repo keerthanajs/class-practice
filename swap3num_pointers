@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int swap(int *a, int *b, int *c){
+    
+    int temp;
+    
+    temp = *a;
+    *a = *c;
+    *c = *b;
+    *b = temp;
+    
+    return 0;
+}
+
+int main(){
+    int n1, n2, n3;
+    
+    scanf("%d%d%d", &n1, &n2, &n3);
+    
+    printf("The value before swapping are :\n");
+    printf("element 1 = %d\n", n1);
+    printf("element 2 = %d\n", n2);
+    printf("element 3 = %d\n", n3);
+    
+    swap(&n1, &n2, &n3);
+    
+    printf("The value after swapping are :\n");
+    printf("element 1 = %d\n", n1);
+    printf("element 2 = %d\n", n2);
+    printf("element 3 = %d\n", n3);
+    
+    return 0;
+}
