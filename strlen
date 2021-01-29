@@ -1,0 +1,22 @@
+//What is the output for the following code?
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+    char p[20]; 
+    char *s = "string"; 
+    
+    int len = strlen(s);
+    
+    for (int i = 0; i < len; i++){
+        p[i] = s[len - i]; 
+    }
+    
+    len = strlen(p);
+    
+    printf("%d", len);
+    
+    return 0;
+}
+// 0
